@@ -3,3 +3,6 @@ CS157A Team #9 project
 
 ## Project Proposal
 https://docs.google.com/document/d/1cPT1TBGzdlqpoYTMWRF7JZ2daHiAtQl9f8OHPTmBvnM/edit?usp=sharing
+
+## Project Requirements
+https://docs.google.com/document/d/1ilFfwDIK17xxILQx0scwFLeDIWO_rgJXE4wsyqgTEao/edit?usp=sharing
