@@ -75,8 +75,13 @@ WSGI_APPLICATION = 'team9.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'team9',
+        'ENGINE': 'mysql.connector.django',
+        'USER': 'django',
+        'PASSWORD': 'team99*',
+        'OPTIONS': {
+            'autocommit': True,
+        },
     }
 }
 
