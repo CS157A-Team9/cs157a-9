@@ -60,7 +60,7 @@ In order to give Django access to the MySQL database, we need to create a user a
 ```
 CREATE USER django@localhost IDENTIFIED BY 'team99*';
 CREATE DATABASE team9;
-GRANT ALL ON team.* TO django@localhost;
+GRANT ALL ON team9.* TO django@localhost;
 ```
 
 To import timezones into MySQL, run the following in your terminal
