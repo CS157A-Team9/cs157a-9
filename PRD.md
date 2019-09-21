@@ -18,30 +18,30 @@ The web framework for this project is Django, which will run on the Apache web s
 ## Functional Requirements
 
 ### User Access
-Users will access the web application through a web browser and will authenticate via student ID and password. The system will support three main types of access, each with different levels of read and write capability to data entities. The three types of access are student, professor and administrator. 
+Users will access the web application through a web browser and will authenticate via student ID and password. The system will support three main types of access, each with different levels of read and write capability to data entities. The three types of access are student, professor and administrator. Administrators would be able to access all privilege in the system. Professors would be given the power to adjust grades. Students would only be able to view and manage their class schedules. 
 
 ### Functions
 
 #### Authentication
-Each user of the system will authenticate to gain access to their protected account data.
+Each user of the system will authenticate to gain access to their protected account data. Each user will be given a unique id and an associated passcode to access the system. The system will verify the given information and grant access to the given user.
 
 #### Account Settings
-Each user has the ability to update their account settings such as password and communication preferences.
+Each user can update their account settings such as password and communication preferences. The setting page will display current settings and options to change information.
 
 #### Course Search
-Each user is able to search through the database of available courses and view the details of each course such as the instructor, pre-requisites, location on campus, general course description, dates when the course will be held and number of available seats.
+Each user is able to search through the database of available courses and view the details of each course such as the instructor, pre-requisites, location on campus, general course description, dates when the course will be held and number of available seats. User can also use a filter to eliminate unrelated information. The program will then gather the relevant data and display it to the user.
 
 #### Course Actions
-Student users are able to add, drop and waitlist courses.
+Student users are able to add, drop and waitlist courses. Professors are able to view student information in the course they teach and drop a student. Administrators are allowed to do all of the above and are able to add or delete a listed course.
 
 #### Course Records
-Student users are able to view a list of past courses that they have taken and view details including the grade that they obtained.
+Student users are able to view a list of past courses that they have taken and view details including the grade that they obtained. The system will generate a report to this request and display it to the user.
 
 #### Professor Search
 Each user is able to browse current professors of the university by department and also search professors by keyword. They may also view public profiles of each professor.
 
 #### Professor Profile
-Instructors are able to manage their public profile and update details such as their profile picture, background, credentials, office hours and contact information.
+Instructors are able to manage their public profile and update details such as their profile picture, background, credentials, office hours and contact information. The profile would be displayed to any user making an inquiry about the instructor.
 
 #### Course Administration
 Administrators of the web application such as school faculty are able to manage available courses including searching available courses, creating new courses, editing existing courses and deleting courses.
