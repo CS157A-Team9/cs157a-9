@@ -88,20 +88,59 @@ To use Apache as the server to deploy the Django application, follow the steps b
 #### Install mod_wsgi
 https://pypi.org/project/mod-wsgi/
 #### Configure Apache
-Will Update
+Use terminal and type the following:
 ```
-Include /private/etc/apache2/other/*.conf
+sudo -s
+cd /etc/apache2
+```
+Add the configuration for the Django application by modifying apache2 httpd.conf file.
+```
+vim httpd.conf
+```
+This command will open the httpd.conf file and allow text edit in terminal. Modify the following lines according to your local path and add them to the httpd.conf file.
+```
+LoadModule wsgi_module /Users/YOUR_USER_NAME/.local/share/virtualenvs/cs157a-9-wSNcz8AY/lib/python3.7/site-packages/mod_wsgi/server/mod_wsgi-py37.cpython-37m-darwin.so
+WSGIScriptAlias / /Users/YOUR_USER_NAME/cs157a-9/team9/team9/wsgi.py
+WSGIPythonHome /Users/YOUR_USER_NAME/.local/share/virtualenvs/cs157a-9-wSNcz8AY
+WSGIPythonPath /Users/YOUR_USER_NAME/cs157a-9/team9
 
-LoadModule wsgi_module /Users/Ashley/.local/share/virtualenvs/cs157a-9-wSNcz8AY/lib/python3.7/site-packages/mod_wsgi/server/mod_wsgi-py37.cpython-37m-darwin.so
-WSGIScriptAlias / /Users/Ashley/cs157a-9/team9/team9/wsgi.py
-WSGIPythonHome /Users/Ashley/.local/share/virtualenvs/cs157a-9-wSNcz8AY
-WSGIPythonPath /Users/Ashley/cs157a-9/team9
-#WSGIPythonPath /Users/Ashley/.local/share/virtualenvs/cs157a-9-wSNcz8AY/lib/python3.7/site-packages
-
-<Directory /Users/Ashley/cs157a-9/team9/team9>
+<Directory /Users/YOUR_USER_NAME/cs157a-9/team9/team9>
 <Files wsgi.py>
 Require all granted
 </Files>
 </Directory>
 ```
+**Note:** 
+LoadModule wsgi_module (path_to_your_mod_wsgi.so)
+WSGIScriptAlias / (path_to_your_project_folder_containing_wsgi.py)
+WSGIPythonHome (path_to_your_pipenv_for_the_project)
+WSGIPythonPath (path_to_your_project_folder)
 
+To find out location of the python development environment for the project, do the following:
+```
+pipenv shell
+cd your_project_path
+```
+run
+```
+python -c 'import sys; print(sys.prefix)'
+```
+A directory will be displayed on your console and that would be the path to the pipenv.
+
+
+After adding the configurations to httpd.conf, exit text editing mode by
+```
+Press Esc to escape insert mode
+Then type :wq!
+```
+Remember to restart the Apache server to reflect changes
+```
+sudo apachectl restart
+```
+
+If successful, the default Django page will be displayed when accessing 
+```
+localhost
+or
+http://127.0.0.1/
+```
