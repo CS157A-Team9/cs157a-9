@@ -81,3 +81,27 @@ To start the Django development server, run the following
 ```
 
 Then visit http://localhost:8000 in your browser.
+
+## Django with Apache
+### Mac
+To use Apache as the server to deploy the Django application, follow the steps below.
+#### Install mod_wsgi
+https://pypi.org/project/mod-wsgi/
+#### Configure Apache
+Will Update
+```
+Include /private/etc/apache2/other/*.conf
+
+LoadModule wsgi_module /Users/Ashley/.local/share/virtualenvs/cs157a-9-wSNcz8AY/lib/python3.7/site-packages/mod_wsgi/server/mod_wsgi-py37.cpython-37m-darwin.so
+WSGIScriptAlias / /Users/Ashley/cs157a-9/team9/team9/wsgi.py
+WSGIPythonHome /Users/Ashley/.local/share/virtualenvs/cs157a-9-wSNcz8AY
+WSGIPythonPath /Users/Ashley/cs157a-9/team9
+#WSGIPythonPath /Users/Ashley/.local/share/virtualenvs/cs157a-9-wSNcz8AY/lib/python3.7/site-packages
+
+<Directory /Users/Ashley/cs157a-9/team9/team9>
+<Files wsgi.py>
+Require all granted
+</Files>
+</Directory>
+```
+
