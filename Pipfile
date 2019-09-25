@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 django = "==2.2.5"
 mysql-connector-python = "*"
+mod-wsgi = "*"
 
 [requires]
 python_version = "3.7"
