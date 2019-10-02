@@ -82,6 +82,12 @@ To start the Django development server, run the following
 
 Then visit http://localhost:8000 in your browser.
 
+### Django Admin
+Django comes with a built in admin panel that can be accessed via http://localhost:8000/admin. In order to login, a user needs to be created first. To create a super user, use the following command from the terminal
+```
+./manage.py createsuperuser
+```
+
 ## Django with Apache
 ### Mac
 To use Apache as the server to deploy the Django application, follow the steps below.
