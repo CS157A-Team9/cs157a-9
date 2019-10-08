@@ -1,13 +1,18 @@
 # Schema
+USER( id, password, email, last_name, first_name, is_staff, is_superuser, is_active, username, last_login, date_joined)
 
-USER()
-STUDENT()
-COURSE_HISTORY()
-PROFESSOR()
+STUDENT(major_1, major_2, minor, GPA)
 
-DEPARTMENT()
-COURSE()
-SECTION()
+COURSE_HISTORY(semester, year, grade)
 
-BUILDING()
-ROOM()
+PROFESSOR(bio, contact_info, office_hours)
+
+DEPARTMENT(code, name)
+
+COURSE(number, name, description)
+
+SECTION(id, status, time, semester)
+
+BUILDING(code, name)
+
+ROOM(number, capacity)
