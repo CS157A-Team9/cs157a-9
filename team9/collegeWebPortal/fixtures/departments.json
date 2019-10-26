@@ -1,0 +1,1241 @@
+[
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "AAS",
+        "fields": {
+            "name": "Asian American Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ADV",
+        "fields": {
+            "name": "Advertising"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "AE",
+        "fields": {
+            "name": "Aerospace Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "AFAM",
+        "fields": {
+            "name": "African American Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "AFRS",
+        "fields": {
+            "name": "African Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "AMS",
+        "fields": {
+            "name": "American Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ANI",
+        "fields": {
+            "name": "Animation and Illustration"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ANTH",
+        "fields": {
+            "name": "Anthropology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "APSC",
+        "fields": {
+            "name": "Health and Human Sciences"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ARAB",
+        "fields": {
+            "name": "Arabic"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ARED",
+        "fields": {
+            "name": "Art Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ART",
+        "fields": {
+            "name": "Art"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ARTH",
+        "fields": {
+            "name": "Art History"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "AS",
+        "fields": {
+            "name": "Aerospace Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ASIA",
+        "fields": {
+            "name": "Asian Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ASTR",
+        "fields": {
+            "name": "Astronomy"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ATH",
+        "fields": {
+            "name": "Intercollegiate Athletics"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "AUD",
+        "fields": {
+            "name": "Doctor of Audiology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "AVIA",
+        "fields": {
+            "name": "Aviation"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "BIOL",
+        "fields": {
+            "name": "Biology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "BME",
+        "fields": {
+            "name": "Biomedical Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "BOT",
+        "fields": {
+            "name": "Botany"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "BUS",
+        "fields": {
+            "name": "Business Graduate Program"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "BUS1",
+        "fields": {
+            "name": "Business: Acct and Finance"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "BUS2",
+        "fields": {
+            "name": "Business: Marketing"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "BUS3",
+        "fields": {
+            "name": "Business: School of Management"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "BUS4",
+        "fields": {
+            "name": "Business: Mgmt Info Sys"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "BUS5",
+        "fields": {
+            "name": "Business: Global Innovation"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CA",
+        "fields": {
+            "name": "Creative Arts"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CCS",
+        "fields": {
+            "name": "Chicana and Chicano Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CD",
+        "fields": {
+            "name": "Child and Adolescent Development"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CE",
+        "fields": {
+            "name": "Civil and Environment Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CHAD",
+        "fields": {
+            "name": "Child and Adolescent Development"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CHE",
+        "fields": {
+            "name": "Chemical Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CHEM",
+        "fields": {
+            "name": "Chemistry"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CHIN",
+        "fields": {
+            "name": "Chinese"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CM",
+        "fields": {
+            "name": "CourseMatch"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CMPE",
+        "fields": {
+            "name": "Computer Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "COLT",
+        "fields": {
+            "name": "Comparative Literature"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "COMM",
+        "fields": {
+            "name": "Communication Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CS",
+        "fields": {
+            "name": "Computer Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CTGE",
+        "fields": {
+            "name": "Professional Development"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "CXFR",
+        "fields": {
+            "name": "Conversion Transfer"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "DANC",
+        "fields": {
+            "name": "Dance"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "DATA",
+        "fields": {
+            "name": "Data Analytics"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "DRAM",
+        "fields": {
+            "name": "Drama"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "DSGD",
+        "fields": {
+            "name": "Graphic Design"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "DSGN",
+        "fields": {
+            "name": "Design"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "DSID",
+        "fields": {
+            "name": "Industrial Design"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "DSIT",
+        "fields": {
+            "name": "Interior Design"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ECON",
+        "fields": {
+            "name": "Economics"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDAD",
+        "fields": {
+            "name": "Educational Admin"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDAU",
+        "fields": {
+            "name": "Audiology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDCO",
+        "fields": {
+            "name": "Counselor Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDD",
+        "fields": {
+            "name": "EdD Leadership Program"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDEL",
+        "fields": {
+            "name": "Elementary Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDIT",
+        "fields": {
+            "name": "Industrial Technology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDLD",
+        "fields": {
+            "name": "Education Leadership and Development"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDSC",
+        "fields": {
+            "name": "Secondary Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDSE",
+        "fields": {
+            "name": "Special Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDSP",
+        "fields": {
+            "name": "Speech Pathology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDTE",
+        "fields": {
+            "name": "Teacher Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EDUC",
+        "fields": {
+            "name": "Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "EE",
+        "fields": {
+            "name": "Electrical Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ENED",
+        "fields": {
+            "name": "English Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ENGL",
+        "fields": {
+            "name": "English"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ENGR",
+        "fields": {
+            "name": "General Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ENT",
+        "fields": {
+            "name": "Entomology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ENVH",
+        "fields": {
+            "name": "Environmental Health"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ENVS",
+        "fields": {
+            "name": "Environmental Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ESE",
+        "fields": {
+            "name": "Early Start Program English"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ESM",
+        "fields": {
+            "name": "Early Start Program Math"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "FLED",
+        "fields": {
+            "name": "Foreign Language Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "FORL",
+        "fields": {
+            "name": "Foreign Languages"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "FREN",
+        "fields": {
+            "name": "French"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "FS",
+        "fields": {
+            "name": "Forensic Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "GEOG",
+        "fields": {
+            "name": "Geography"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "GEOL",
+        "fields": {
+            "name": "Geology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "GERM",
+        "fields": {
+            "name": "German"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "GERO",
+        "fields": {
+            "name": "Gerontology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "GLST",
+        "fields": {
+            "name": "Global Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "GRK",
+        "fields": {
+            "name": "Greek"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HA",
+        "fields": {
+            "name": "Humanities and the Arts"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HEBR",
+        "fields": {
+            "name": "Hebrew"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HIST",
+        "fields": {
+            "name": "History"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HPED",
+        "fields": {
+            "name": "Human Performance Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HPRF",
+        "fields": {
+            "name": "Health Professions"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HRTM",
+        "fields": {
+            "name": "Hosp, Rec and Tourism Mgt"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HS",
+        "fields": {
+            "name": "Health Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HSED",
+        "fields": {
+            "name": "Health Science Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HSPM",
+        "fields": {
+            "name": "Hospitality Management"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HTEM",
+        "fields": {
+            "name": "Hospitality Tourism and Event Management"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HUM",
+        "fields": {
+            "name": "Humanities"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "HUP",
+        "fields": {
+            "name": "Human Performance"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "INDS",
+        "fields": {
+            "name": "Industrial Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "INFM",
+        "fields": {
+            "name": "Informatics"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "INFO",
+        "fields": {
+            "name": "School of Information"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "INTL",
+        "fields": {
+            "name": "International Programs"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ISE",
+        "fields": {
+            "name": "Industrial and Systems Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ISED",
+        "fields": {
+            "name": "Industrial Studies Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ITAL",
+        "fields": {
+            "name": "Italian"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "JOUR",
+        "fields": {
+            "name": "Journalism"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "JPN",
+        "fields": {
+            "name": "Japanese"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "JS",
+        "fields": {
+            "name": "Justice Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "JWSS",
+        "fields": {
+            "name": "Jewish Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "KIN",
+        "fields": {
+            "name": "Kinesiology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "KNED",
+        "fields": {
+            "name": "Kinesiology Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "LAS",
+        "fields": {
+            "name": "Legal Assisstance"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "LATN",
+        "fields": {
+            "name": "Latin"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "LING",
+        "fields": {
+            "name": "Linguistics"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "LLD",
+        "fields": {
+            "name": "Linguistics and Language Development"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "LSTP",
+        "fields": {
+            "name": "Liberal Studies Teacher Prep"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MARA",
+        "fields": {
+            "name": "Master Archives and Records Admin"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MAS",
+        "fields": {
+            "name": "Mexican American Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MATE",
+        "fields": {
+            "name": "Materials Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MATH",
+        "fields": {
+            "name": "Mathematics"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MCOM",
+        "fields": {
+            "name": "Mass Communication"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MDES",
+        "fields": {
+            "name": "Middle East Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ME",
+        "fields": {
+            "name": "Mechanical Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MEDT",
+        "fields": {
+            "name": "Medical Technology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "METR",
+        "fields": {
+            "name": "Meteorology and Climate Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MFCC",
+        "fields": {
+            "name": "Marr Fam Child Counsel"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MICR",
+        "fields": {
+            "name": "Microbiology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MILS",
+        "fields": {
+            "name": "Military Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MS",
+        "fields": {
+            "name": "Marine Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MTED",
+        "fields": {
+            "name": "Math Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MTM",
+        "fields": {
+            "name": "Transportation Management"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MUED",
+        "fields": {
+            "name": "Music Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MUSC",
+        "fields": {
+            "name": "Music"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "MUSE",
+        "fields": {
+            "name": "Metropoltn Univ Schlr Exp"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "NSCI",
+        "fields": {
+            "name": "Natural Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "NTSC",
+        "fields": {
+            "name": "Natural Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "NUCS",
+        "fields": {
+            "name": "Nuclear Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "NUFS",
+        "fields": {
+            "name": "Nutrition, Food Science & Pkg"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "NURS",
+        "fields": {
+            "name": "Nursing"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "OCTH",
+        "fields": {
+            "name": "Occupational Therapy"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ORGS",
+        "fields": {
+            "name": "Organizational Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PADM",
+        "fields": {
+            "name": "Public Administration"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PERS",
+        "fields": {
+            "name": "Persian"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PHIL",
+        "fields": {
+            "name": "Philosophy"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PHOT",
+        "fields": {
+            "name": "Photography"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PHSC",
+        "fields": {
+            "name": "Physical Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PHYS",
+        "fields": {
+            "name": "Physics"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PKG",
+        "fields": {
+            "name": "Packaging"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "POLS",
+        "fields": {
+            "name": "Political Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PORT",
+        "fields": {
+            "name": "Portuguese"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PR",
+        "fields": {
+            "name": "Public Relations"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PSYC",
+        "fields": {
+            "name": "Psychology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PT",
+        "fields": {
+            "name": "Packaging Technology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "PUNJ",
+        "fields": {
+            "name": "Punjabi"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "RECL",
+        "fields": {
+            "name": "Recreation and Leisure Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "RELS",
+        "fields": {
+            "name": "Religious Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "RTVF",
+        "fields": {
+            "name": "Radio-Television-Film"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "RUSS",
+        "fields": {
+            "name": "Russian"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SCED",
+        "fields": {
+            "name": "Science Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SCI",
+        "fields": {
+            "name": "Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SCWK",
+        "fields": {
+            "name": "Social Work"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SE",
+        "fields": {
+            "name": "Software Engineering"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SMPD",
+        "fields": {
+            "name": "Med Product Develop Mgmt"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SOCI",
+        "fields": {
+            "name": "Sociology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SOCS",
+        "fields": {
+            "name": "Social Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SPAN",
+        "fields": {
+            "name": "Spanish"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SPED",
+        "fields": {
+            "name": "Speech Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SSCI",
+        "fields": {
+            "name": "Social Science"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "SSED",
+        "fields": {
+            "name": "Social Science Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "STAT",
+        "fields": {
+            "name": "Statistics"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "TA",
+        "fields": {
+            "name": "Theatre Arts"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "TAG",
+        "fields": {
+            "name": "Tagalog"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "TECH",
+        "fields": {
+            "name": "Technology"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "TEED",
+        "fields": {
+            "name": "Technology Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "TQM",
+        "fields": {
+            "name": "Total Quality Management"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "UNVS",
+        "fields": {
+            "name": "University Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "URBP",
+        "fields": {
+            "name": "Urban & Regional Plng"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "VE",
+        "fields": {
+            "name": "Vocational Education"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "VIET",
+        "fields": {
+            "name": "Vietnamese"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "WOMS",
+        "fields": {
+            "name": "Women's Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.department",
+        "pk": "ZOOL",
+        "fields": {
+            "name": "Zoology"
+        }
+    }
+]
