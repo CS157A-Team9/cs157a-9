@@ -6,4 +6,4 @@ class Student(ProfileBase):
 	gpa = models.DecimalField(max_digits=3, decimal_places=2, blank=True)
 	major_1 = models.CharField(max_length=255)
 	major_2 = models.CharField(max_length=255, blank=True)
-	mminor = models.CharField(max_length=255, blank=True)
+	minor = models.CharField(max_length=255, blank=True)
