@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from .models import Course
 
 
 @login_required
@@ -13,4 +14,6 @@ def myCourses(request):
 	return render(request, 'collegeWebPortal/MyCourses.html')
 
 def registration(request):
-	return render(request, 'collegeWebPortal/Registration.html')
+	courses = Course.objects.all()
+	print(courses)
+	return render(request, 'collegeWebPortal/Registration.html', {'courses' : courses})

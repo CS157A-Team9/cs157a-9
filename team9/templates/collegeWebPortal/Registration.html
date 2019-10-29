@@ -3,4 +3,16 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1>Registration</h1>
 </div>
+<div>
+	<ul style="list-style-type: none;">
+		{% for e in courses %}
+		<ul>
+			<li style="float: left; width: 150px;">{{e.department.code}}{{e.number}}</li>
+			<li style="float: left;">{{e.name}}</li>
+		</ul>
+		{% endfor %}
+	</ul>
+</div>
 {% endblock %}
+
+
