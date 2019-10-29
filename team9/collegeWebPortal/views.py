@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from .models import Course
 
-
 @login_required
 def index(request):
 	return render(request, 'collegeWebPortal/index.html')
@@ -15,5 +14,4 @@ def myCourses(request):
 
 def registration(request):
 	courses = Course.objects.all()
-	print(courses)
 	return render(request, 'collegeWebPortal/Registration.html', {'courses' : courses})
