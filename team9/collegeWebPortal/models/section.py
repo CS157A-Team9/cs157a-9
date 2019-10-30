@@ -54,3 +54,6 @@ class Section(models.Model):
 	end_time = models.TimeField()
 	instructor = models.ForeignKey(to=Professor, on_delete=models.PROTECT)
 	location = models.ForeignKey(to=Room, on_delete=models.PROTECT)
+
+	def __str__(self):
+		return "%d" % self.number

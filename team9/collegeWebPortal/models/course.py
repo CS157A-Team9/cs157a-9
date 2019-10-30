@@ -12,3 +12,6 @@ class Course(models.Model):
 
 	class Meta:
 		unique_together = (('number', 'department'))
+
+	def __str__(self):
+		return "%s" % self.name

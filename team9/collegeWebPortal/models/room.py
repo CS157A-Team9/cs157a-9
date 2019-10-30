@@ -9,3 +9,6 @@ class Room(models.Model):
 
 	class Meta:
 		unique_together = (('number', 'building'))
+
+	def __str__(self):
+		return "%s%d" % (self.building, self.number)
