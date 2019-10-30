@@ -150,3 +150,8 @@ localhost
 or
 http://127.0.0.1/
 ```
+
+# Running In Production
+
+## Notes
+We have chosen to use the pure python adapter for mysql (mysql-connector-python) even though it is less efficient than the alternatives due to some known issues getting Python and MySQL to play well together in a Mac environment. When running the app in production, it will be very advantages in terms of performance to use mysqlclient instead.
