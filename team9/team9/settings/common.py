@@ -86,6 +86,9 @@ DATABASES = {
         'PASSWORD': 'team99*',
         'OPTIONS': {
             'autocommit': True,
+            # Temporary solution to the bug listed below
+            # https://bugs.mysql.com/bug.php?id=90541
+            'use_pure': True,
         },
     }
 }

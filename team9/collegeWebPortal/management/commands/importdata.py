@@ -4,7 +4,7 @@ from django.core.management.commands import loaddata
 
 # Note: Fixture order is important to prevent Django relational errors
 fixtures = [
-    'groups', 'users', 'buildings', 'departments', 'courses', 'professors', 'rooms'
+    'groups', 'users', 'buildings', 'departments', 'courses', 'professors', 'rooms', 'sections'
 ]
 
 class Command(BaseCommand):
