@@ -1,6 +1,26 @@
 # cs157a-9
 CS157A Team #9 project
 
+## Table of Contents
+- [Project Proposal](#project-proposal)
+- [Project Requirements](#project-requirements)
+- [Development Guide](#development-guide)
+  * [System Dependencies](#system-dependencies)
+  * [Installation (Mac)](#installation-mac)
+    + [Homebrew](#homebrew)
+    + [Python 3](#python-3)
+    + [Pipenv](#pipenv)
+  * [Getting Started](#getting-started)
+    + [MySQL](#mysql)
+    + [Django](#django)
+    + [Django Admin](#django-admin)
+  * [Django with Apache](#django-with-apache)
+    + [Mac](#mac)
+      - [Install mod_wsgi](#install-mod_wsgi)
+      - [Configure Apache](#configure-apache)
+- [Running In Production](#running-in-production)
+  * [Notes](#notes)
+
 ## Project Proposal
 https://docs.google.com/document/d/1cPT1TBGzdlqpoYTMWRF7JZ2daHiAtQl9f8OHPTmBvnM/edit?usp=sharing
 
@@ -150,3 +170,8 @@ localhost
 or
 http://127.0.0.1/
 ```
+
+# Running In Production
+
+## Notes
+We have chosen to use the pure python adapter for mysql (mysql-connector-python) even though it is less efficient than the alternatives due to some known issues getting Python and MySQL to play well together in a Mac environment. When running the app in production, it will be very advantages in terms of performance to use mysqlclient instead.

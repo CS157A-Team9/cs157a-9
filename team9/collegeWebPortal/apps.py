@@ -2,4 +2,7 @@ from django.apps import AppConfig
 
 
 class CollegewebportalConfig(AppConfig):
-    name = 'CollegeWebPortal'
+    name = 'collegeWebPortal'
+
+    def ready(self):
+        from .signals import ensure_profile_exists

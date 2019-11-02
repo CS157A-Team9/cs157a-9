@@ -7,4 +7,4 @@ class Professor(ProfileBase):
     bio = models.TextField(blank=True)
     contact_info = models.CharField(max_length=255, blank=True)
     office_hours = models.CharField(max_length=255, blank=True)
-    department = models.ForeignKey(to=Department, on_delete=models.PROTECT)
+    department = models.ForeignKey(to=Department, on_delete=models.PROTECT, blank=True, null=True)

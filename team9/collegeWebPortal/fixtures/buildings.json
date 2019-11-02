@@ -1,0 +1,226 @@
+[
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "ADM",
+        "fields": {
+            "name": "Administration"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "ART",
+        "fields": {
+            "name": "Art Building"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "ASH",
+        "fields": {
+            "name": "Associated Students House"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "BBC",
+        "fields": {
+            "name": "Boccardo Business Complex"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "BT",
+        "fields": {
+            "name": "Business Tower"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "CC",
+        "fields": {
+            "name": "Computer Center"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "CCB",
+        "fields": {
+            "name": "Central Classroom Building"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "CL",
+        "fields": {
+            "name": "Clark Hall"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "DBH",
+        "fields": {
+            "name": "Dwight Bentel Hall"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "DH",
+        "fields": {
+            "name": "Duncan Hall"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "DMH",
+        "fields": {
+            "name": "Dudley Moorhead Hall"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "ENG",
+        "fields": {
+            "name": "Engineering Building"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "FOB",
+        "fields": {
+            "name": "Faculty Offices"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "HB",
+        "fields": {
+            "name": "Health Building"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "HGH",
+        "fields": {
+            "name": "Hugh Gillis Hall"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "IRC",
+        "fields": {
+            "name": "Industrial Resource Center"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "IS",
+        "fields": {
+            "name": "Industrial Studies"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "KING",
+        "fields": {
+            "name": "Dr. Martin Luther King, Jr. Library"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "MH",
+        "fields": {
+            "name": "MacQuarrie Hall"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "MUS",
+        "fields": {
+            "name": "Music Building"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "SCI",
+        "fields": {
+            "name": "Science Building"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "SH",
+        "fields": {
+            "name": "Sweeney Hall"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "SPM",
+        "fields": {
+            "name": "Spartan Memorial"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "SPXC",
+        "fields": {
+            "name": "Spartan Complex Central"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "SPXE",
+        "fields": {
+            "name": "Spartan Complex East"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "SRAC",
+        "fields": {
+            "name": "Student Recreation and Aquatic Center"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "SSC",
+        "fields": {
+            "name": "Student Services Center"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "SU",
+        "fields": {
+            "name": "Diaz Compean Student Union"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "SWC",
+        "fields": {
+            "name": "Student Wellness Center"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "TH",
+        "fields": {
+            "name": "Tower Hall"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "WSQ",
+        "fields": {
+            "name": "Washington Square Hall"
+        }
+    },
+    {
+        "model": "collegeWebPortal.building",
+        "pk": "YUH",
+        "fields": {
+            "name": "Yoshihiro Uchida Hall"
+        }
+    }
+]

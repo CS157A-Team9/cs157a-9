@@ -1,0 +1,257 @@
+[
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 1,
+        "fields": {
+            "course": 1,
+            "number": 40125,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "MW",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "18:00:00",
+            "end_time": "17:15:00",
+            "instructor": 14,
+            "location": 4
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 2,
+        "fields": {
+            "course": 9,
+            "number": 40101,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "MW",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "12:00:00",
+            "end_time": "12:15:00",
+            "instructor": 3,
+            "location": 8
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 3,
+        "fields": {
+            "course": 10,
+            "number": 40174,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "TT",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "10:00:00",
+            "end_time": "11:15:00",
+            "instructor": 2,
+            "location": 5
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 4,
+        "fields": {
+            "course": 2,
+            "number": 43581,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "TT",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "16:30:00",
+            "end_time": "17:45:00",
+            "instructor": 1,
+            "location": 8
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 5,
+        "fields": {
+            "course": 3,
+            "number": 43679,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "THU",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "17:00:00",
+            "end_time": "19:45:00",
+            "instructor": 14,
+            "location": 4
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 6,
+        "fields": {
+            "course": 5,
+            "number": 42679,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "MW",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "09:00:00",
+            "end_time": "10:15:00",
+            "instructor": 17,
+            "location": 3
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 7,
+        "fields": {
+            "course": 6,
+            "number": 44563,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "MW",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "13:00:00",
+            "end_time": "14:15:00",
+            "instructor": 18,
+            "location": 9
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 8,
+        "fields": {
+            "course": 7,
+            "number": 44584,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "MW",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "14:15:00",
+            "end_time": "16:00:00",
+            "instructor": 5,
+            "location": 5
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 9,
+        "fields": {
+            "course": 8,
+            "number": 43641,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "TT",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "16:15:00",
+            "end_time": "18:00:00",
+            "instructor": 19,
+            "location": 2
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 10,
+        "fields": {
+            "course": 11,
+            "number": 42366,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "TT",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "10:00:00",
+            "end_time": "11:15:00",
+            "instructor": 7,
+            "location": 12
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 11,
+        "fields": {
+            "course": 12,
+            "number": 47291,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "MON",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "12:00:00",
+            "end_time": "14:45:00",
+            "instructor": 1,
+            "location": 2
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 12,
+        "fields": {
+            "course": 13,
+            "number": 45876,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "WED",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "18:00:00",
+            "end_time": "20:45:00",
+            "instructor": 4,
+            "location": 13
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 13,
+        "fields": {
+            "course": 14,
+            "number": 47284,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "THU",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "13:00:00",
+            "end_time": "15:45:00",
+            "instructor": 6,
+            "location": 14
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 14,
+        "fields": {
+            "course": 15,
+            "number": 40597,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "THU",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "15:15:00",
+            "end_time": "18:00:00",
+            "instructor": 11,
+            "location": 15
+        }
+    },
+    {
+        "model": "collegeWebPortal.section",
+        "pk": 15,
+        "fields": {
+            "course": 4,
+            "number": 41864,
+            "status": "O",
+            "semester": "SP",
+            "schedule": "MW",
+            "start_date": "2020-01-23",
+            "end_date": "2020-05-11",
+            "start_time": "11:15:00",
+            "end_time": "13:00:00",
+            "instructor": 16,
+            "location": 6
+        }
+    }
+]

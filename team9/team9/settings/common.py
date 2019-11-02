@@ -13,16 +13,13 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '@i153d+95aobg8ufu$=askhlwg36i%xre9klj4&_5bhuc+#+fw'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -42,6 +39,8 @@ INSTALLED_APPS = [
     'team9',
     'collegeWebPortal',
 ]
+
+#SILENCED_SYSTEM_CHECKS = ['mysql.E001']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -87,6 +86,9 @@ DATABASES = {
         'PASSWORD': 'team99*',
         'OPTIONS': {
             'autocommit': True,
+            # Temporary solution to the bug listed below
+            # https://bugs.mysql.com/bug.php?id=90541
+            'use_pure': True,
         },
     }
 }
