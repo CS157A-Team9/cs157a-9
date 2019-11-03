@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'collegeWebPortal',
 ]
 
-#SILENCED_SYSTEM_CHECKS = ['mysql.E001']
+SILENCED_SYSTEM_CHECKS = ['mysql.E001']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
