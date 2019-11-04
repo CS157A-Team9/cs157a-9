@@ -1,11 +1,14 @@
 from django.urls import path
 
-from . import views
+from .views import common, professor, student
 
 urlpatterns = [
-	path('', views.index, name='index'),
-    path('Home', views.index, name='index'),
-    path('MyProfessors', views.myProfessor, name='myProfessor'),
-    path('Registration', views.registration, name='registration'),
-    path('MyCourses', views.myCourses, name='myCourses')
+	path('', common.index, name='index'),
+    path('professor', professor.index, name='professor'),
+    path('professor/courses', professor.courses, name='professor-courses'),
+    path('professor/profile', professor.profile, name='professor-profile'),
+    path('student', student.index, name='student'),
+    path('student/courses', student.courses, name='student-courses'),
+    path('student/professors', student.professors, name='student-professors'),
+    path('student/registration', student.registration, name='student-registration'),
 ]

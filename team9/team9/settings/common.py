@@ -143,3 +143,8 @@ LOGIN_REDIRECT_URL = '/'
 # https://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+# College Web Portal Config
+GROUP_PROFESSORS = 'Professors'
+GROUP_STUDENTS = 'Students'
