@@ -4,15 +4,15 @@
     <h1>Registration</h1>
 </div>
 <div>
-	{% for e in courses %}
 	<ul style="list-style-type: none;">
-		<ul style="list-style-type: none;">
+	{% for e in courses %}
+		<ul style="list-style-type: none; height: 40px;">
 			<li style="display:inline;">{{e.department.code}}{{e.number}}</li>
 			<li style="display:inline;">{{e.name}}</li>
-			<li style="display:inline; float:right;"><button>select</button></li>
+			<li style="display:inline; float: right;"><button>select</button></li>
 		</ul>
-	</ul>
 	{% endfor %}
+	</ul>
 </div>
 {% endblock %}
 
