@@ -1,0 +1,206 @@
+[
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 1,
+        "fields": {
+            "number": "47",
+            "name": "Computer Systems",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": []
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 2,
+        "fields": {
+            "number": "146",
+            "name": "Data Structures and Algorithms",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": []
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 3,
+        "fields": {
+            "number": "147",
+            "name": "Computer Architecture",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 4,
+        "fields": {
+            "number": "149",
+            "name": "Operating Systems",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 5,
+        "fields": {
+            "number": "151",
+            "name": "Object Oriented Programming",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 6,
+        "fields": {
+            "number": "152",
+            "name": "Programming Paradigms",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                5
+            ]
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 7,
+        "fields": {
+            "number": "154",
+            "name": "Formal Language and Computability",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 8,
+        "fields": {
+            "number": "160",
+            "name": "Software Engineering",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                2,
+                5
+            ]
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 9,
+        "fields": {
+            "number": "46A",
+            "name": "Intro to Programming",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": []
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 10,
+        "fields": {
+            "number": "46B",
+            "name": "Intro to Data Structures",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                9
+            ]
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 11,
+        "fields": {
+            "number": "100W",
+            "name": "Technical Writing Workshop",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": []
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 12,
+        "fields": {
+            "number": "157A",
+            "name": "Intro to Database Management Systems",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                2
+            ]
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 13,
+        "fields": {
+            "number": "157B",
+            "name": "Database Management Systems II",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                12
+            ]
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 14,
+        "fields": {
+            "number": "157C",
+            "name": "NoSQL Database Systems",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                12
+            ]
+        }
+    },
+    {
+        "model": "collegeWebPortal.course",
+        "pk": 15,
+        "fields": {
+            "number": "166",
+            "name": "Information Security",
+            "description": "",
+            "department": "CS",
+            "units": 3,
+            "prerequisites": [
+                1,
+                2
+            ]
+        }
+    }
+]

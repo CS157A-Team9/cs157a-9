@@ -1,0 +1,137 @@
+[
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 1,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "ART"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 2,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "BBC"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 3,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "CL"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 4,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "DH"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 5,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "ENG"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 6,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "MH"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 7,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "MUS"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 8,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "SCI"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 9,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "SH"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 10,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "SPXC"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 11,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "SPXE"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 12,
+        "fields": {
+            "number": "101",
+            "capacity": 50,
+            "building": "YUH"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 13,
+        "fields": {
+            "number": "102",
+            "capacity": 50,
+            "building": "YUH"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 14,
+        "fields": {
+            "number": "103",
+            "capacity": 50,
+            "building": "YUH"
+        }
+    },
+    {
+        "model": "collegeWebPortal.room",
+        "pk": 15,
+        "fields": {
+            "number": "104",
+            "capacity": 50,
+            "building": "YUH"
+        }
+    }
+]

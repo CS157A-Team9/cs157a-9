@@ -1,0 +1,192 @@
+[
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 1,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 2,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 3,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 4,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 5,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 6,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 7,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 8,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 9,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 10,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 11,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 12,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 13,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 14,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 15,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 16,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 17,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 18,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    },
+    {
+        "model": "collegeWebPortal.professor",
+        "pk": 19,
+        "fields": {
+            "bio": "",
+            "contact_info": "",
+            "office_hours": "",
+            "department": null
+        }
+    }
+]
