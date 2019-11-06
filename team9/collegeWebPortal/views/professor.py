@@ -7,14 +7,14 @@ from collegeWebPortal.decorators import group_required
 @login_required
 @group_required(settings.GROUP_PROFESSORS)
 def index(request):
-    pass
+    return render(request, 'collegeWebPortal/professor/index.html')
 
 @login_required
 @group_required(settings.GROUP_PROFESSORS)
 def courses(request):
-    pass
+    return render(request, 'collegeWebPortal/professor/courses.html')
 
 @login_required
 @group_required(settings.GROUP_PROFESSORS)
 def profile(request):
-    pass
+    return render(request, 'collegeWebPortal/professor/profile.html')
