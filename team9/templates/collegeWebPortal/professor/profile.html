@@ -3,4 +3,44 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1>My Profile</h1>
 </div>
+<div>
+    <h2>Bio</h2> 
+    <a href="/professor/edit_bio" style="float:right;">edit</a>
+    {% if showbioform == "True" %}
+    <form method="POST" action="/professor/edit_bio">
+	{% csrf_token %}
+	<input type="search" name="bio" value = "{{usr.bio}}" style="width:100%; height:150px;">
+	<button type="submit">submit</button>
+	</form>
+	{% else %}
+	    {% if usr.bio == "" %}
+	    <p>No bio available.</p>
+	    {% else %}
+    	<p>{{usr.bio}}</p>
+	    {% endif %}
+    {% endif %}
+
+    <h2>Office hours</h2>
+    <a href="/professor/edit_hour" style="float:right;">edit</a>
+    {% if showhourform == "True" %}
+    <form method="POST" action="/professor/edit_hour">
+	{% csrf_token %}
+	<input type="text" name="hour" value = "{{usr.office_hours}}" style="width:100%;">
+	<button type="submit">submit</button>
+	</form>
+	{% else %}
+	    {% if usr.office_hours == "" %}
+	    <p>No office hour information available.</p>
+	    {% else %}
+	    <p>{{usr.office_hours}}</p>
+	    {% endif %}
+    {% endif %}
+
+    <h2>Contact</h2>
+    <a href="" style="float:right;">edit</a>
+    {% if usr.contact_info == "" %}
+    <p>No contact information available.</p>
+    {% endif %}
+
+</div>
 {% endblock %}
