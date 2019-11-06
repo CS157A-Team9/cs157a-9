@@ -1,0 +1,55 @@
+{% extends 'collegeWebPortal/base_student.html' %}
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1>Registration</h1>
+</div>
+<div>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+                <th>Section</th>
+                <th>Semester</th>
+                <th>Schedule</th>
+                <th>Instructor</th>
+                <th>Location</th>
+                <th>Status</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for section in sections %}
+			<tr>
+                <td>{{ section.number }}</td>
+                <td>{{ section.get_semester_display }} {{ section.start_date }} - {{ section.end_date }}</td>
+                <td>{{ section.get_schedule_display }} {{ section.start_time }} - {{ section.end_time }}</td>
+                <td>{{ section.instructor }}</td>
+                <td>{{ section.location }}</td>
+                <td>{{ section.get_status_display }}</td>
+				<td></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	{% if sections.has_other_pages %}
+	<ul class="pagination">
+		{% if sections.has_previous %}
+		<li class="page-item"><a class="page-link" href="?page={{ sections.previous_page_number }}">&laquo;</a></li>
+		{% else %}
+		<li class="page-item disabled"><span class="page-link">&laquo;</span></li>
+		{% endif %}
+		{% for i in sections.paginator.page_range %}
+			{% if sections.number == i %}
+			<li class="page-item active"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
+			{% else %}
+			<li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+			{% endif %}
+		{% endfor %}
+		{% if sections.has_next %}
+		<li class="page-item"><a class="page-link" href="?page={{ sections.next_page_number }}">&raquo;</a></li>
+		{% else %}
+		<li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+		{% endif %}
+	</ul>
+	{% endif %}
+</div>
+{% endblock %}

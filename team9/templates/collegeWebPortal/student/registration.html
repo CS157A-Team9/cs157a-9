@@ -7,7 +7,7 @@
 	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>
-				<th>Id</th>
+				<th>Course</th>
 				<th>Name</th>
 				<th>Units</th>
 			</tr>
@@ -15,7 +15,9 @@
 		<tbody>
 			{% for course in courses %}
 			<tr>
-				<td>{{ course.department.code }}{{ course.number }}</td>
+				<td>
+					<a href="{% url 'student-registration-course' course.id %}">{{ course.department.code }}{{ course.number }}</a>
+				</td>
 				<td>{{ course.name }}</td>
 				<td>{{ course.units }}</td>
 			</tr>

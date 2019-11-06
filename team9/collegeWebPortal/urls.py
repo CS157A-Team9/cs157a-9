@@ -11,4 +11,5 @@ urlpatterns = [
     path('student/courses', student.courses, name='student-courses'),
     path('student/professors', student.professors, name='student-professors'),
     path('student/registration', student.registration, name='student-registration'),
+    path('student/registration/<int:course_id>', student.sectionList, name='student-registration-course'),
 ]
