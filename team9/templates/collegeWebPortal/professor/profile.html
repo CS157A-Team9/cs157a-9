@@ -1,0 +1,63 @@
+{% extends 'collegeWebPortal/base_professor.html' %}
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1>My Profile</h1>
+</div>
+<div>
+    <h2>Bio</h2> 
+    <a href="/professor/edit_bio" style="float:right;">edit</a>
+    {% if showbioform == "True" %}
+    <form method="POST" action="/professor/edit_bio">
+	{% csrf_token %}
+	<textarea name="bio" type="text" style="width:100%; height:100px;">{{usr.bio}}</textarea>
+	<button type="submit">submit</button>
+	</form>
+	{% else %}
+	    {% if usr.bio == "" %}
+	    <p>No bio available.</p>
+	    {% else %}
+    	<p>{{usr.bio}}</p>
+	    {% endif %}
+    {% endif %}
+
+    <h2>Office hours</h2>
+    <a href="/professor/edit_hour" style="float:right;">edit</a>
+    {% if showhourform == "True" %}
+    <form method="POST" action="/professor/edit_hour">
+	{% csrf_token %}
+	<textarea name="hour" type="text" maxlength= "255" style="width:100%; height:100px;">{{usr.office_hours}}</textarea>
+	<button type="submit">submit</button>
+	</form>
+	{% else %}
+	    {% if usr.office_hours == "" %}
+	    <p>No office hour information available.</p>
+	    {% else %}
+	    <p>{{usr.office_hours}}</p>
+	    {% endif %}
+    {% endif %}
+
+    <h2>Contact</h2>
+    <a href="/professor/edit_contact" style="float:right;">edit</a>
+    {% if showcontactform == "True" %}
+    <form method="POST" action="/professor/edit_contact">
+	{% csrf_token %}
+	<textarea name="contact" type="text" maxlength= "255" style="width:100%; height:100px;">{{usr.contact_info}}</textarea>
+	<button type="submit">submit</button>
+	</form>
+	{% else %}
+	    {% if usr.contact_info == "" %}
+	    <p>No contact information available.</p>
+	    {% else %}
+	    <p>{{usr.contact_info}}</p>
+	    {% endif %}
+    {% endif %}
+
+</div>
+{% endblock %}
+
+
+<style>
+	p {
+		display: inline-block;
+	}
+</style>

@@ -84,7 +84,9 @@ DATABASES = {
         'ENGINE': 'mysql.connector.django',
         'USER': 'django',
         'PASSWORD': 'team99*',
+        'CHARSET': 'utf8mb4',
         'OPTIONS': {
+            'charset': 'utf8mb4',
             'autocommit': True,
             # Temporary solution to the bug listed below
             # https://bugs.mysql.com/bug.php?id=90541
