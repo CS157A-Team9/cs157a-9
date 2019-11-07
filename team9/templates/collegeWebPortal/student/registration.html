@@ -4,46 +4,50 @@
     <h1>Registration</h1>
 </div>
 <div>
-	<table class="table table-bordered table-striped">
-		<thead>
-			<tr>
-				<th>Course</th>
-				<th>Name</th>
-				<th>Units</th>
-			</tr>
-		</thead>
-		<tbody>
-			{% for course in courses %}
-			<tr>
-				<td>
-					<a href="{% url 'student-registration-course' course.id %}">{{ course.department.code }}{{ course.number }}</a>
-				</td>
-				<td>{{ course.name }}</td>
-				<td>{{ course.units }}</td>
-			</tr>
-			{% endfor %}
-		</tbody>
-	</table>
-	{% if courses.has_other_pages %}
-	<ul class="pagination">
-		{% if courses.has_previous %}
-		<li class="page-item"><a class="page-link" href="?page={{ courses.previous_page_number }}">&laquo;</a></li>
-		{% else %}
-		<li class="page-item disabled"><span class="page-link">&laquo;</span></li>
-		{% endif %}
-		{% for i in courses.paginator.page_range %}
-			{% if courses.number == i %}
-			<li class="page-item active"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
+	{% if courses %}
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Course</th>
+					<th>Name</th>
+					<th>Units</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for course in courses %}
+				<tr>
+					<td>
+						<a href="{% url 'student-registration-course' course.id %}">{{ course.department.code }}{{ course.number }}</a>
+					</td>
+					<td>{{ course.name }}</td>
+					<td>{{ course.units }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% if courses.has_other_pages %}
+		<ul class="pagination">
+			{% if courses.has_previous %}
+			<li class="page-item"><a class="page-link" href="?page={{ courses.previous_page_number }}">&laquo;</a></li>
 			{% else %}
-			<li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+			<li class="page-item disabled"><span class="page-link">&laquo;</span></li>
 			{% endif %}
-		{% endfor %}
-		{% if courses.has_next %}
-		<li class="page-item"><a class="page-link" href="?page={{ courses.next_page_number }}">&raquo;</a></li>
-		{% else %}
-		<li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+			{% for i in courses.paginator.page_range %}
+				{% if courses.number == i %}
+				<li class="page-item active"><span class="page-link">{{ i }} <span class="sr-only">(current)</span></span></li>
+				{% else %}
+				<li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+				{% endif %}
+			{% endfor %}
+			{% if courses.has_next %}
+			<li class="page-item"><a class="page-link" href="?page={{ courses.next_page_number }}">&raquo;</a></li>
+			{% else %}
+			<li class="page-item disabled"><span class="page-link">&raquo;</span></li>
+			{% endif %}
+		</ul>
 		{% endif %}
-	</ul>
+	{% else %}
+		<h4>There are currently no available courses for the {{ department }} department.</h4>
 	{% endif %}
 </div>
 {% endblock %}

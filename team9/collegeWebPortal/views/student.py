@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render, get_object_or_404
 from collegeWebPortal.decorators import group_required
-from collegeWebPortal.models import Course, Section
+from collegeWebPortal.models import Course, Department, Section
 
 
 @login_required
@@ -25,8 +25,14 @@ def professors(request):
 @group_required(settings.GROUP_STUDENTS)
 def registration(request):
 	page = request.GET.get('page', 1)
-	course_list = Course.objects.all().order_by('number')
-	paginator = Paginator(course_list, 15)
+	dept = request.GET.get('dept', None)
+
+	if (dept is not None and Department.objects.filter(pk=dept.upper()).exists()):
+		course_list = Course.objects.filter(department__code__iexact=dept)
+	else:
+		course_list = Course.objects.all()
+
+	paginator = Paginator(course_list.order_by('number'), 15)
 
 	try:
 		courses = paginator.page(page)
@@ -35,14 +41,16 @@ def registration(request):
 	except EmptyPage:
 		courses = paginator.page(1)
 
-	return render(request, 'collegeWebPortal/student/registration.html', {'courses' : courses})
+	context = {'courses': courses, 'department': dept}
+
+	return render(request, 'collegeWebPortal/student/registration.html', context)
 
 @login_required
 @group_required(settings.GROUP_STUDENTS)
 def sectionList(request, course_id):
 	page = request.GET.get('page', 1)
 	course = get_object_or_404(Course, pk=course_id)
-	section_list = Section.objects.all().order_by('number')
+	section_list = Section.objects.filter(course=course).order_by('number')
 	paginator = Paginator(section_list, 15)
 
 	try:
