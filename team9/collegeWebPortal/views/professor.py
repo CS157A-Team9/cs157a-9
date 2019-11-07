@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from collegeWebPortal.decorators import group_required
 from collegeWebPortal.models import Professor
+from collegeWebPortal.models import Section
+from collegeWebPortal.models import Course
 
 @login_required
 @group_required(settings.GROUP_PROFESSORS)
@@ -13,7 +15,9 @@ def index(request):
 @login_required
 @group_required(settings.GROUP_PROFESSORS)
 def courses(request):
-    return render(request, 'collegeWebPortal/professor/courses.html')
+	sections = Section.objects.filter(instructor=request.user.id)
+	classes = [(x, x.course) for x in sections]
+	return render(request, 'collegeWebPortal/professor/courses.html', {'classes': classes})
 
 @login_required
 @group_required(settings.GROUP_PROFESSORS)
