@@ -4,26 +4,34 @@
     <h1>My Courses</h1>
 </div>
 <div>
-    <table style="width:100%">
-    	<tr>
-    		<th>Course</th>
-    		<th>Section #</th>
-    		<th>Name</th>
-    		<th>Time</th>
-    		<th>Room</th>
-    	</tr>
-	    {% for s, c in classes %}
-    	<tr>
-    		<td>{{c.department.code}}{{c.number}}</td>
-    		<td>{{s.number}}</td>
-    		<td>{{c.name}}</td>
-    		<td>{{s.start_time}} - {{s.end_time}} {{s.schedule}}</td>
-    		<td>{{s.location.building.code}}{{s.location.number}}</td>
-    	</tr>
-    	{% empty %}
-	    <p>You do not have a course.</p>
-	    {% endfor %}
-    </table>
+	<form action="/professor/courses" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+	{% if not classes%}
+		<p>You do not have a course.</p>
+	{% else %}
+		<table style="width:100%">
+	    	<tr>
+	    		<th>Course</th>
+	    		<th>Section #</th>
+	    		<th>Name</th>
+	    		<th>Time</th>
+	    		<th>Room</th>
+	    	</tr>
+		    {% for s, c in classes %}
+	    	<tr>
+	    		<td>{{c.department.code}}{{c.number}}</td>
+	    		<td>{{s.number}}</td>
+	    		<td>{{c.name}}</td>
+	    		<td>{{s.start_time}} - {{s.end_time}} {{s.schedule}}</td>
+	    		<td>{{s.location.building.code}}{{s.location.number}}</td>
+	    	</tr>
+		    {% endfor %}
+	    </table>
+	{% endif %}
+   
 
 
 </div>

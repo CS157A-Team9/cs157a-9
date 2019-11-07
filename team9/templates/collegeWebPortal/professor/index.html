@@ -5,8 +5,23 @@
 </div>
 <div>
 	<h2>Class Schedule</h2>
-	<ul style="list-style: none;">
-		<li>You are not currently teaching any courses.</li>
-	</ul>
+	{% if not classes %}
+		<p>You are not currently teaching any courses.</p>
+	{% else %}
+	<table>
+		<tr>
+			<th>Time</th>
+			<th>Course</th>
+			<th>Location</th>
+		</tr>
+		{% for c in classes %}
+		<tr>
+			<td>{{s.start_time}} - {{s.end_time}} {{s.schedule}}</td>
+			<td>{{c.course.name}}</td>
+			<td>{{c.location.building.code}}{{c.location.number}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	{% endif %}
 </div>
 {% endblock %}

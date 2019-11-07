@@ -6,18 +6,33 @@ from collegeWebPortal.decorators import group_required
 from collegeWebPortal.models import Professor
 from collegeWebPortal.models import Section
 from collegeWebPortal.models import Course
+from collegeWebPortal.views.form import *
+from django.http import HttpResponse
 
 @login_required
 @group_required(settings.GROUP_PROFESSORS)
 def index(request):
-    return render(request, 'collegeWebPortal/professor/index.html')
+	sections = Section.objects.filter(instructor=request.user.id, semester='FA')
+	return render(request, 'collegeWebPortal/professor/index.html', {'classes': sections})
 
 @login_required
 @group_required(settings.GROUP_PROFESSORS)
 def courses(request):
-	sections = Section.objects.filter(instructor=request.user.id)
-	classes = [(x, x.course) for x in sections]
-	return render(request, 'collegeWebPortal/professor/courses.html', {'classes': classes})
+	sections = None
+	if request.method == 'POST':
+		form = SemesterForm(request.POST)
+		if form.is_valid():
+			semester = form.cleaned_data['semester']
+			sections = Section.objects.filter(instructor=request.user.id, semester=semester)
+			classes = [(x, x.course) for x in sections]
+			return render(request, 'collegeWebPortal/professor/courses.html', {'classes': classes, 'form': form})
+		else:
+			return HttpResponse("error")
+	else:
+		form = SemesterForm(initial={'semester':'FA'})
+		sections = Section.objects.filter(instructor=request.user.id, semester='FA')
+		classes = [(x, x.course) for x in sections]
+		return render(request, 'collegeWebPortal/professor/courses.html', {'classes': classes, 'form': form})
 
 @login_required
 @group_required(settings.GROUP_PROFESSORS)
