@@ -1,9 +1,13 @@
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
+from django.urls import reverse
+
+from collegeWebPortal.forms.common import ConfirmForm
 from collegeWebPortal.decorators import group_required
-from collegeWebPortal.models import Course, Department, Section
+from collegeWebPortal.models import Course, Department, Enrollment, Section, Student
 
 
 @login_required
@@ -60,6 +64,35 @@ def sectionList(request, course_id):
 	except EmptyPage:
 		sections = paginator.page(1)
 
-	context = {'course': course, 'sections': sections}
+	enrollment = Enrollment.objects.filter(section__in=sections)
+	enrolled = [x.section for x in enrollment]
+
+	context = {
+		'course': course,
+		'enrolled': enrolled,
+		'sections': sections
+	}
 
 	return render(request, 'collegeWebPortal/student/section-list.html', context)
+
+@login_required
+@group_required(settings.GROUP_STUDENTS)
+def sectionRegister(request, section_id):
+	section = get_object_or_404(Section, pk=section_id)
+
+	if request.method == 'POST':
+		form = ConfirmForm(request.POST)
+
+		if form.is_valid():
+			# Ensure student enrolls in sections only once
+			if not Enrollment.objects.filter(student__user=request.user, section=section).exists():
+				student = Student.objects.get(pk=request.user.id)
+				Enrollment.objects.create(student=student, section=section, credits=0)
+
+			return HttpResponseRedirect(reverse('student'))
+	else:
+		form = ConfirmForm()
+
+	context = {'form': form, 'section': section}
+
+	return render(request, 'collegeWebPortal/student/section-register.html', context)

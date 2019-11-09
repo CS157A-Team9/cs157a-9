@@ -26,7 +26,13 @@
                 <td>{{ section.instructor }}</td>
                 <td>{{ section.location }}</td>
                 <td>{{ section.get_status_display }}</td>
-				<td></td>
+				<td>
+					{% if section in enrolled %}
+						<a class="btn btn-sm btn-outline-primary disabled" href="{% url 'student-section-register' section.id %}">Registered</a>
+					{% else %}
+						<a class="btn btn-sm btn-outline-primary" href="{% url 'student-section-register' section.id %}">Register</a>
+					{% endif %}
+				</td>
 			</tr>
 			{% endfor %}
 		</tbody>
