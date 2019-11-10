@@ -27,6 +27,11 @@ def professors(request):
 
 @login_required
 @group_required(settings.GROUP_STUDENTS)
+def all_professors(request):
+	return render(request, 'collegeWebPortal/student/all-professors.html')
+
+@login_required
+@group_required(settings.GROUP_STUDENTS)
 def registration(request):
 	page = request.GET.get('page', 1)
 	dept = request.GET.get('dept', None)
