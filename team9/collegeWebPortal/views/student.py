@@ -65,7 +65,7 @@ def sectionList(request, course_id):
 		sections = paginator.page(1)
 
 	enrollment = Enrollment.objects.filter(section__in=sections)
-	enrolled = [x.section for x in enrollment]
+	enrolled = set([x.section for x in enrollment])
 
 	context = {
 		'course': course,
