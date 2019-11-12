@@ -22,3 +22,9 @@
         My Professors
     </a>
 </li>
+<li class="nav-item">
+    <a class="nav-link{% if request.path == '/student/all_professors' %} active{% endif %}" href="{% url 'student-all-professors' %}">
+        <span class="oi oi-people"></span>
+        All Professors
+    </a>
+</li>
