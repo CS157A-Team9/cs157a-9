@@ -5,7 +5,7 @@
     </a>
 </li>
  <li class="nav-item">
-    <a class="nav-link{% if request.path == '/student/registration' %} active{% endif %}" href="{% url 'student-registration' %}">
+    <a class="nav-link{% if '/student/registration' in request.path %} active{% endif %}" href="{% url 'student-registration' %}">
         <span class="oi oi-task"></span>
         Registration
     </a>
@@ -20,5 +20,11 @@
     <a class="nav-link{% if request.path == '/student/professors' %} active{% endif %}" href="{% url 'student-professors' %}">
         <span class="oi oi-people"></span>
         My Professors
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link{% if request.path == '/student/all_professors' %} active{% endif %}" href="{% url 'student-all-professors' %}">
+        <span class="oi oi-people"></span>
+        All Professors
     </a>
 </li>
