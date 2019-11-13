@@ -18,10 +18,19 @@ def index(request):
 @login_required
 @group_required(settings.GROUP_STUDENTS)
 def courses(request):
+	dropped = request.GET.get('dropped', 0)
+	section_id = request.GET.get('section_id', 0)
+
 	# TODO: Optimize query and filter by the current semester
 	enrollment = Enrollment.objects.filter(student__user=request.user, status=Enrollment.STATUS_ENROLLED)
 	sections = [x.section for x in enrollment]
-	context = {'sections': sections}
+
+	context = {
+		'dropped': dropped,
+		'section_id': section_id,
+		'sections': sections,
+	}
+
 	return render(request, 'collegeWebPortal/student/courses.html', context)
 
 @login_required
@@ -145,8 +154,7 @@ def processAction(request, section_id, action_type):
 		return HttpResponseRedirect(reverse('student-registration'))
 
 	if enrollment:
-		enrollment.status = status
-		enrollment.save()
+		enrollment.update(status=status)
 	else:
 		student = Student.objects.get(pk=request.user.id)
 		Enrollment.objects.create(student=student, section=section, credits=0, status=status)

@@ -3,6 +3,14 @@
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1>My Courses</h1>
 </div>
+{% if section_id %}
+	<div class="alert alert-success alert-dismissable fade show" role="alert">
+		<strong>Success!</strong>
+		{% if dropped %}
+            Section {{ section_id }} has been dropped.
+        {% endif %}
+	</div>
+{% endif %}
 <div>
     {% if sections %}
         <table class="table table-bordered table-striped">
@@ -23,7 +31,7 @@
                     <td>{{ section.get_schedule_display }} {{ section.start_time }} - {{ section.end_time }}</td>
                     <td>{{ section.instructor }}</td>
                     <td>
-
+                        <a href="#" class="btn btn-outline-danger btn-sm">Drop</a>
                     </td>
                 </tr>
                 {% endfor %}
