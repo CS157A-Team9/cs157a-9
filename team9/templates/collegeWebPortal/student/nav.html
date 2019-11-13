@@ -5,7 +5,7 @@
     </a>
 </li>
  <li class="nav-item">
-    <a class="nav-link{% if '/student/registration' in request.path %} active{% endif %}" href="{% url 'student-registration' %}">
+    <a class="nav-link{% if '/student/registration' in request.path and '/checkout' not in request.path and '/saved' not in request.path %} active{% endif %}" href="{% url 'student-registration' %}">
         <span class="oi oi-task"></span>
         Registration
     </a>
