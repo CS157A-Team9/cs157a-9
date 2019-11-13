@@ -11,6 +11,18 @@
     </a>
 </li>
 <li class="nav-item">
+    <a class="nav-link{% if request.path == '/student/registration/checkout' %} active{% endif %}" href="{% url 'student-registration-checkout' %}">
+        <span class="oi oi-cart"></span>
+        Checkout
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link{% if request.path == '/student/registration/saved' %} active{% endif %}" href="{% url 'student-registration-saved' %}">
+        <span class="oi oi-bookmark"></span>
+        Saved Courses
+    </a>
+</li>
+<li class="nav-item">
     <a class="nav-link{% if request.path == '/student/courses' %} active{% endif %}" href="{% url 'student-courses' %}">
         <span class="oi oi-list"></span>
         My Courses

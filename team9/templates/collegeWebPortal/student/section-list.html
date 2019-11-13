@@ -4,6 +4,18 @@
 	<h1>Registration</h1>
 	<h4>{{ course.department.code }}{{ course.number }}</h4>
 </div>
+{% if section_id %}
+	<div class="alert alert-success alert-dismissable fade show" role="alert">
+		<strong>Success!</strong>
+		{% if cart_added %}
+			<p>Section {{ section_id }} was added to your cart. <a href="{% url 'student-registration-checkout' %}" class="alert-link">Visit cart</a></p>
+		{% elif enrolled %}
+			<p>You've enrolled in section {{ section_id }}.</p>
+		{% elif saved %}
+			<p>Section {{ section_id }} was added to your saved list. <a href="{% url 'student-registration-saved' %}" class="alert-link">Visit saved courses</a></p>
+		{% endif %}
+	</div>
+{% endif %}
 <div>
 	<table class="table table-bordered table-striped">
 		<thead>
@@ -27,11 +39,28 @@
                 <td>{{ section.location }}</td>
                 <td>{{ section.get_status_display }}</td>
 				<td>
-					{% if section in enrolled %}
-						<a class="btn btn-sm btn-outline-primary disabled" href="{% url 'student-section-register' section.id %}">Registered</a>
-					{% else %}
-						<a class="btn btn-sm btn-outline-primary" href="{% url 'student-section-register' section.id %}">Register</a>
-					{% endif %}
+					<div class="dropdown">
+						<button class="btn btn-sm btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select</button>
+						<div class="dropdown-menu">
+							{% if section in status_dict.enrolled %}
+								<a class="dropdown-item disabled" href="{% url 'student-section-register' section.id %}">Register now</a>
+								<a class="dropdown-item disabled" href="{% url 'student-registration-process' section.id 2 %}">Add to cart</a>
+								<a class="dropdown-item disabled" href="{% url 'student-registration-process' section.id 3 %}">Save for later</a>
+							{% elif section in status_dict.incart %}
+								<a class="dropdown-item" href="{% url 'student-section-register' section.id %}">Register now</a>
+								<a class="dropdown-item disabled" href="{% url 'student-registration-process' section.id 2 %}">Add to cart</a>
+								<a class="dropdown-item disabled" href="{% url 'student-registration-process' section.id 3 %}">Save for later</a>
+							{% elif section in status_dict.saved %}
+								<a class="dropdown-item" href="{% url 'student-section-register' section.id %}">Register now</a>
+								<a class="dropdown-item" href="{% url 'student-registration-process' section.id 2 %}">Add to cart</a>
+								<a class="dropdown-item disabled" href="{% url 'student-registration-process' section.id 3 %}">Save for later</a>
+							{% else %}
+								<a class="dropdown-item" href="{% url 'student-section-register' section.id %}">Register now</a>
+								<a class="dropdown-item" href="{% url 'student-registration-process' section.id 2 %}">Add to cart</a>
+								<a class="dropdown-item" href="{% url 'student-registration-process' section.id 3 %}">Save for later</a>
+							{% endif %}
+						</div>
+					</div>
 				</td>
 			</tr>
 			{% endfor %}

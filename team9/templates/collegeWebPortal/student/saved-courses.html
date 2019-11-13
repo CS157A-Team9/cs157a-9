@@ -1,0 +1,38 @@
+{% extends 'collegeWebPortal/base_student.html' %}
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1>Saved Courses</h1>
+</div>
+<div>
+    {% if sections %}
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Semester</th>
+                    <th>Schedule</th>
+                    <th>Instructor</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for section in sections %}
+                <tr>
+                    <td>{{ section.number }}</td>
+                    <td>{{ section.get_semester_display }} {{ section.start_date }} - {{ section.end_date }}</td>
+                    <td>{{ section.get_schedule_display }} {{ section.start_time }} - {{ section.end_time }}</td>
+                    <td>{{ section.instructor }}</td>
+                    <td>{{ section.get_status_display }}</td>
+                    <td>
+
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>You currently have no saved courses. Visit <a href="{% url 'student-registration' %}">Registration</a> to select courses.</p>
+    {% endif %}
+</div>
+{% endblock %}

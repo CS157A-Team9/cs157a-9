@@ -17,4 +17,7 @@ urlpatterns = [
     path('student/registration', student.registration, name='student-registration'),
     path('student/registration/<int:course_id>', student.sectionList, name='student-registration-course'),
     path('student/registration/section/<int:section_id>', student.sectionRegister, name='student-section-register'),
+    path('student/registration/process/<int:section_id>/<int:action_type>', student.processAction, name='student-registration-process'),
+    path('student/registration/checkout', student.checkout, name='student-registration-checkout'),
+    path('student/registration/saved', student.savedCourses, name='student-registration-saved'),
 ]

@@ -58,6 +58,11 @@ def registration(request):
 @group_required(settings.GROUP_STUDENTS)
 def sectionList(request, course_id):
 	page = request.GET.get('page', 1)
+	section_id = request.GET.get('section_id', 0)
+	cart_added = request.GET.get('cart_added', 0)
+	enrolled = request.GET.get('enrolled', 0)
+	saved = request.GET.get('saved', 0)
+
 	course = get_object_or_404(Course, pk=course_id)
 	section_list = Section.objects.filter(course=course).order_by('number')
 	paginator = Paginator(section_list, 15)
@@ -69,13 +74,28 @@ def sectionList(request, course_id):
 	except EmptyPage:
 		sections = paginator.page(1)
 
-	enrollment = Enrollment.objects.filter(section__in=sections)
-	enrolled = set([x.section for x in enrollment])
+	status_dict = {
+		'enrolled': set(),
+		'incart': set(),
+		'saved': set(),
+	}
 
+	for e in Enrollment.objects.filter(section__in=sections):
+		if e.status == Enrollment.STATUS_ENROLLED:
+			status_dict['enrolled'].add(e.section)
+		elif e.status == Enrollment.STATUS_INCART:
+			status_dict['incart'].add(e.section)
+		elif e.status == Enrollment.STATUS_SAVED:
+			status_dict['saved'].add(e.section)
+	
 	context = {
 		'course': course,
+		'sections': sections,
+		'status_dict': status_dict,
+		'section_id': section_id,
+		'cart_added': cart_added,
 		'enrolled': enrolled,
-		'sections': sections
+		'saved': saved,
 	}
 
 	return render(request, 'collegeWebPortal/student/section-list.html', context)
@@ -101,3 +121,50 @@ def sectionRegister(request, section_id):
 	context = {'form': form, 'section': section}
 
 	return render(request, 'collegeWebPortal/student/section-register.html', context)
+
+@login_required
+@group_required(settings.GROUP_STUDENTS)
+def processAction(request, section_id, action_type):
+	section = get_object_or_404(Section, pk=section_id)
+	enrollment = Enrollment.objects.filter(student__user=request.user, section__id__exact=section_id)
+
+	if action_type == 1:
+		param = 'enrolled'
+		status = Enrollment.STATUS_ENROLLED
+	elif action_type == 2:
+		param = 'cart_added'
+		status = Enrollment.STATUS_INCART
+	elif action_type == 3:
+		param = 'saved'
+		status = Enrollment.STATUS_SAVED
+	else:
+		return HttpResponseRedirect(reverse('student-registration'))
+
+	if enrollment:
+		enrollment.update(status=status)
+	else:
+		student = Student.objects.get(pk=request.user.id)
+		Enrollment.objects.create(student=student, section=section, credits=0, status=status)
+
+	url = reverse('student-registration-course', kwargs={'course_id': section.course.id})
+	return HttpResponseRedirect("%s?%s=1&section_id=%d" % (url, param, section.number))
+
+@login_required
+@group_required(settings.GROUP_STUDENTS)
+def checkout(request):
+	enrollment = Enrollment.objects.filter(student__user=request.user, status=Enrollment.STATUS_INCART)
+	sections = [x.section for x in enrollment]
+
+	context = {'sections': sections}
+
+	return render(request, 'collegeWebPortal/student/checkout.html', context)
+
+@login_required
+@group_required(settings.GROUP_STUDENTS)
+def savedCourses(request):
+	enrollment = Enrollment.objects.filter(student__user=request.user, status=Enrollment.STATUS_SAVED)
+	sections = [x.section for x in enrollment]
+
+	context = {'sections': sections}
+
+	return render(request, 'collegeWebPortal/student/saved-courses.html', context)
