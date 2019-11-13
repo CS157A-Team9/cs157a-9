@@ -91,7 +91,7 @@ def sectionList(request, course_id):
 			status_dict['incart'].add(e.section)
 		elif e.status == Enrollment.STATUS_SAVED:
 			status_dict['saved'].add(e.section)
-	
+
 	context = {
 		'course': course,
 		'sections': sections,
@@ -160,6 +160,25 @@ def checkout(request):
 	sections = [x.section for x in enrollment]
 
 	context = {'sections': sections}
+
+	if request.method == 'POST':
+		status_dict = {
+			'enrolled': set(),
+			'removed': set(),
+		}
+
+		for e in enrollment:
+			action = request.POST.get("section_%d" % e.section.id)
+
+			if action == 'register':
+				e.update(status=Enrollment.STATUS_ENROLLED)
+				status_dict['enrolled'].add(e.section)
+			elif action == 'remove':
+				e.delete()
+				status_dict['removed'].add(e.section)
+
+		context['submitted'] = True
+		context['status_dict'] = status_dict
 
 	return render(request, 'collegeWebPortal/student/checkout.html', context)
 

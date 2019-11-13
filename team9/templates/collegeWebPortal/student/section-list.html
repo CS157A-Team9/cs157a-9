@@ -8,11 +8,11 @@
 	<div class="alert alert-success alert-dismissable fade show" role="alert">
 		<strong>Success!</strong>
 		{% if cart_added %}
-			<p>Section {{ section_id }} was added to your cart. <a href="{% url 'student-registration-checkout' %}" class="alert-link">Visit cart</a></p>
+			Section {{ section_id }} was added to your cart. <a href="{% url 'student-registration-checkout' %}" class="alert-link">Visit cart</a>
 		{% elif enrolled %}
-			<p>You've enrolled in section {{ section_id }}.</p>
+			You've enrolled in section {{ section_id }}.
 		{% elif saved %}
-			<p>Section {{ section_id }} was added to your saved list. <a href="{% url 'student-registration-saved' %}" class="alert-link">Visit saved courses</a></p>
+			Section {{ section_id }} was added to your saved list. <a href="{% url 'student-registration-saved' %}" class="alert-link">Visit saved courses</a>
 		{% endif %}
 	</div>
 {% endif %}

@@ -8,17 +8,19 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
+                    <td>Course</td>
                     <th>Section</th>
                     <th>Semester</th>
                     <th>Schedule</th>
                     <th>Instructor</th>
                     <th>Status</th>
-                    <th>Actions</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 {% for section in sections %}
                 <tr>
+                    <td>{{ section.course.department.code }}{{ section.course.number }}</td>
                     <td>{{ section.number }}</td>
                     <td>{{ section.get_semester_display }} {{ section.start_date }} - {{ section.end_date }}</td>
                     <td>{{ section.get_schedule_display }} {{ section.start_time }} - {{ section.end_time }}</td>
