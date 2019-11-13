@@ -137,6 +137,25 @@ def sectionRegister(request, section_id):
 
 @login_required
 @group_required(settings.GROUP_STUDENTS)
+def sectionDrop(request, section_id):
+	section = get_object_or_404(Section, pk=section_id)
+
+	if request.method == 'POST':
+		form = ConfirmForm(request.POST)
+
+		if form.is_valid():
+			enrollment = Enrollment.objects.filter(student__user=request.user, section=section)
+			enrollment.delete()
+			return HttpResponseRedirect(reverse('student-courses') + ("?dropped=1&section_id=%d" % section.number))
+	else:
+		form = ConfirmForm()
+
+	context = {'form': form, 'section': section}
+
+	return render(request, 'collegeWebPortal/student/section-drop.html', context)
+
+@login_required
+@group_required(settings.GROUP_STUDENTS)
 def processAction(request, section_id, action_type):
 	section = get_object_or_404(Section, pk=section_id)
 	enrollment = Enrollment.objects.filter(student__user=request.user, section__id__exact=section_id)

@@ -31,7 +31,7 @@
                     <td>{{ section.get_schedule_display }} {{ section.start_time }} - {{ section.end_time }}</td>
                     <td>{{ section.instructor }}</td>
                     <td>
-                        <a href="#" class="btn btn-outline-danger btn-sm">Drop</a>
+                        <a href="{% url 'student-section-drop' section.id %}" class="btn btn-outline-danger btn-sm">Drop</a>
                     </td>
                 </tr>
                 {% endfor %}
