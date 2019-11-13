@@ -18,7 +18,11 @@ def index(request):
 @login_required
 @group_required(settings.GROUP_STUDENTS)
 def courses(request):
-	return render(request, 'collegeWebPortal/student/courses.html')
+	# TODO: Optimize query and filter by the current semester
+	enrollment = Enrollment.objects.filter(student__user=request.user, status=Enrollment.STATUS_ENROLLED)
+	sections = [x.section for x in enrollment]
+	context = {'sections': sections}
+	return render(request, 'collegeWebPortal/student/courses.html', context)
 
 @login_required
 @group_required(settings.GROUP_STUDENTS)
