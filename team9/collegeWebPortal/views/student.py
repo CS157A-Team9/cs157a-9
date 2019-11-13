@@ -145,7 +145,8 @@ def processAction(request, section_id, action_type):
 		return HttpResponseRedirect(reverse('student-registration'))
 
 	if enrollment:
-		enrollment.update(status=status)
+		enrollment.status = status
+		enrollment.save()
 	else:
 		student = Student.objects.get(pk=request.user.id)
 		Enrollment.objects.create(student=student, section=section, credits=0, status=status)
@@ -171,7 +172,8 @@ def checkout(request):
 			action = request.POST.get("section_%d" % e.section.id)
 
 			if action == 'register':
-				e.update(status=Enrollment.STATUS_ENROLLED)
+				e.status = Enrollment.STATUS_ENROLLED
+				e.save()
 				status_dict['enrolled'].add(e.section)
 			elif action == 'remove':
 				e.delete()
@@ -189,5 +191,25 @@ def savedCourses(request):
 	sections = [x.section for x in enrollment]
 
 	context = {'sections': sections}
+
+	if request.method == 'POST':
+		status_dict = {
+			'added': set(),
+			'removed': set(),
+		}
+
+		for e in enrollment:
+			action = request.POST.get("section_%d" % e.section.id)
+
+			if action == 'add':
+				e.status = Enrollment.STATUS_INCART
+				e.save()
+				status_dict['added'].add(e.section)
+			elif action == 'remove':
+				e.delete()
+				status_dict['removed'].add(e.section)
+
+		context['submitted'] = True
+		context['status_dict'] = status_dict
 
 	return render(request, 'collegeWebPortal/student/saved-courses.html', context)
