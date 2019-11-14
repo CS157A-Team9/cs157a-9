@@ -1,0 +1,33 @@
+{% extends 'collegeWebPortal/base_student.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1>Drop Course</h1>
+</div>
+<div class="d-flex mb-3">
+    <h4>Are you sure you want to drop this course?</h4>
+</div>
+<div>
+    <table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+                <th>Course</th>
+                <th>Section</th>
+                <th>Semester</th>
+                <th>Schedule</th>
+                <th>Instructor</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+                <td>{{ section.course.department.code }}{{ section.course.number }}</td>
+                <td>{{ section.number }}</td>
+                <td>{{ section.get_semester_display }} {{ section.start_date }} - {{ section.end_date }}</td>
+                <td>{{ section.get_schedule_display }} {{ section.start_time }} - {{ section.end_time }}</td>
+                <td>{{ section.instructor }}</td>
+			</tr>
+		</tbody>
+	</table>
+    {% crispy form %}
+</div>
+{% endblock %}

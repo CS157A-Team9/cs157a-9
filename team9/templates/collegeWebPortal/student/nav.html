@@ -5,9 +5,21 @@
     </a>
 </li>
  <li class="nav-item">
-    <a class="nav-link{% if '/student/registration' in request.path %} active{% endif %}" href="{% url 'student-registration' %}">
+    <a class="nav-link{% if '/student/registration' in request.path and '/checkout' not in request.path and '/saved' not in request.path %} active{% endif %}" href="{% url 'student-registration' %}">
         <span class="oi oi-task"></span>
         Registration
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link{% if request.path == '/student/registration/checkout' %} active{% endif %}" href="{% url 'student-registration-checkout' %}">
+        <span class="oi oi-cart"></span>
+        Checkout
+    </a>
+</li>
+<li class="nav-item">
+    <a class="nav-link{% if request.path == '/student/registration/saved' %} active{% endif %}" href="{% url 'student-registration-saved' %}">
+        <span class="oi oi-bookmark"></span>
+        Saved Courses
     </a>
 </li>
 <li class="nav-item">
