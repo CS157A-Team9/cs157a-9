@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db import connection
 from django.http import HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
@@ -10,10 +11,35 @@ from collegeWebPortal.decorators import group_required
 from collegeWebPortal.models import Course, Department, Enrollment, Section, Student, Professor
 
 
+def dictfetchall(cursor):
+    "Return all rows from a cursor as a dict"
+    columns = [col[0] for col in cursor.description]
+    return [
+        dict(zip(columns, row))
+        for row in cursor.fetchall()
+    ]
+
 @login_required
 @group_required(settings.GROUP_STUDENTS)
 def index(request):
-	return render(request, 'collegeWebPortal/student/index.html')
+	def get_scheduled(uid):
+		with connection.cursor() as cursor:
+			cursor.execute(
+				"SELECT collegeWebPortal_course.name, collegeWebPortal_section.*, collegeWebPortal_building.name AS 'building', collegeWebPortal_room.number FROM collegeWebPortal_section \
+				JOIN collegeWebPortal_course ON collegeWebPortal_course.id = collegeWebPortal_section.course_id \
+				JOIN collegeWebPortal_room ON collegeWebPortal_room.id = collegeWebPortal_section.location_id \
+				JOIN collegeWebPortal_building ON collegeWebPortal_building.code = collegeWebPortal_room.building_id \
+				WHERE start_date <= CURDATE() AND end_date >= CURDATE() AND collegeWebPortal_section.id IN \
+				(SELECT section_id FROM collegeWebPortal_enrollment WHERE student_id = %s AND status = %s)",
+				[uid, Enrollment.STATUS_ENROLLED])
+			rows = dictfetchall(cursor)
+		return rows
+	
+	context = {
+		'scheduled': get_scheduled(request.user.id)
+	}
+
+	return render(request, 'collegeWebPortal/student/index.html', context)
 
 @login_required
 @group_required(settings.GROUP_STUDENTS)
@@ -44,14 +70,14 @@ def professors(request):
 @group_required(settings.GROUP_STUDENTS)
 def all_professors(request):
 	professor_list = Professor.objects.all()
-	list_professor = False;
+	list_professor = False
 	return render(request, 'collegeWebPortal/student/all-professors.html', {'list_professor': list_professor, 'professor_list': professor_list})
 
 @login_required
 @group_required(settings.GROUP_STUDENTS)
 def list_professor_info(request, first_name, last_name):
 	professor = Professor.objects.filter(user__first_name=first_name, user__last_name=last_name)
-	list_professor = True;
+	list_professor = True
 	return render(request, 'collegeWebPortal/student/profile.html', {'list_professor': list_professor, 'professor': professor})
 
 
