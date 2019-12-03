@@ -1,0 +1,34 @@
+{% extends 'collegeWebPortal/base_student.html' %}
+{% block content %}
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+{% for p in professor%}
+<h1>{{p.user.first_name}} {{p.user.last_name}}</h1>
+{% endfor %}
+</div>
+<div>
+	{% for p in professor %}
+	<h2>Bio</h2>
+	{% if p.bio %}
+	<p>{{p.bio}}</p>
+	{% else %}
+	<p>The professor has not add anything to this area.</p>
+	{% endif %}
+	<h2>Contact Info</h2>
+	{% if p.contact_info %}
+	<p>{{p.contact_info}}</p>
+	{% else %}
+	<p>The professor has not add anything to this area.</p>
+	{% endif %}
+	
+	<h2>Office Hour</h2>
+	{% if p.office_hours %}
+	<p>{{p.office_hours}}</p>
+	{% else %}
+	<p>The professor has not add anything to this area.</p>
+	{% endif %}
+	<p>{{p.office_hours}}</p>
+	{% endfor %}
+</div>
+{% endblock %}
+

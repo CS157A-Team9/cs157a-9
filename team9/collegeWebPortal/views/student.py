@@ -7,7 +7,7 @@ from django.urls import reverse
 
 from collegeWebPortal.forms.common import ConfirmForm
 from collegeWebPortal.decorators import group_required
-from collegeWebPortal.models import Course, Department, Enrollment, Section, Student
+from collegeWebPortal.models import Course, Department, Enrollment, Section, Student, Professor
 
 
 @login_required
@@ -36,12 +36,24 @@ def courses(request):
 @login_required
 @group_required(settings.GROUP_STUDENTS)
 def professors(request):
-	return render(request, 'collegeWebPortal/student/professors.html')
+	enrollment = Enrollment.objects.filter(student__user=request.user, status=Enrollment.STATUS_ENROLLED)
+	professor_list = [p.section.instructor for p in enrollment]
+	return render(request, 'collegeWebPortal/student/professors.html', {'professor_list': professor_list})
 
 @login_required
 @group_required(settings.GROUP_STUDENTS)
 def all_professors(request):
-	return render(request, 'collegeWebPortal/student/all-professors.html')
+	professor_list = Professor.objects.all()
+	list_professor = False;
+	return render(request, 'collegeWebPortal/student/all-professors.html', {'list_professor': list_professor, 'professor_list': professor_list})
+
+@login_required
+@group_required(settings.GROUP_STUDENTS)
+def list_professor_info(request, first_name, last_name):
+	professor = Professor.objects.filter(user__first_name=first_name, user__last_name=last_name)
+	list_professor = True;
+	return render(request, 'collegeWebPortal/student/profile.html', {'list_professor': list_professor, 'professor': professor})
+
 
 @login_required
 @group_required(settings.GROUP_STUDENTS)
