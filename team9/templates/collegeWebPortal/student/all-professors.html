@@ -5,9 +5,20 @@
     <h1>All Professors</h1>
 </div>
 <div>
-	{% for professor in professor_list %}
-	<a href="{% url 'list-professors' professor.user.first_name professor.user.last_name %}" style="display: block;"> {{ professor.user.first_name }} {{ professor.user.last_name }} </a>
-	{% endfor%}
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for professor in professor_list %}
+			<tr>
+				<td><a href="{% url 'list-professors' professor.user.first_name professor.user.last_name %}">{{ professor.user.first_name }} {{ professor.user.last_name }}</a></td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 </div>
 {% endblock %}
 
